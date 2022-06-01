@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 protocol ZodiacSignDelegate {
     func getData(sign: String)
 }
@@ -20,7 +19,7 @@ class FirstViewController: UIViewController {
         zodiacSignLabel.isHidden = true
        
     }
-
+    //to present second vc
     @IBAction func goToVC(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController {
             vc.delegate = self
