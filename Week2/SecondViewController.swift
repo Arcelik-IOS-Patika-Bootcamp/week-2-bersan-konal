@@ -21,9 +21,8 @@ class SecondViewController: UIViewController {
         // Do any additional setup after loading the view.
         setupUI()
         
-       
     }
-    
+    //creating a datepicker view with TextField
     func setupUI() {
         birthDateTextField.inputView = datePicker
         datePicker.datePickerMode = .date
@@ -35,7 +34,7 @@ class SecondViewController: UIViewController {
         birthDateTextField.inputAccessoryView = toolbar
     }
     
-    
+    //if user has entered his/her birthday, sending day and month to other viewcontroller
     @objc
     func donePressed(){
         birthDateTextField.text = "\(datePicker.date)"
@@ -49,7 +48,7 @@ class SecondViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
         
     }
-    
+    //ugly function to calculate zodiac sign
     func findZodiacSign(day: Int, month: Int) -> String {
         var zodiacSign = ""
         if month == 1 {

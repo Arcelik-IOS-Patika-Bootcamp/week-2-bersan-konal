@@ -6,6 +6,8 @@
 //
 
 import UIKit
+
+
 protocol ZodiacSignDelegate {
     func getData(sign: String)
 }
