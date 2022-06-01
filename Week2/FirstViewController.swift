@@ -24,8 +24,8 @@ class FirstViewController: UIViewController {
     @IBAction func goToVC(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController {
             vc.delegate = self
-           
             self.present(vc, animated: true, completion: nil)
+            zodiacSignLabel.isHidden = false
         }
             
     }
